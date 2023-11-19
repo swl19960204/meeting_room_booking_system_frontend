@@ -3,12 +3,24 @@ import Login from '../view/Login';
 import Register from '../view/Register';
 import ErrorPage from '../view/ErrorPage';
 import UpdatePassword from '../view/UpdatePassword';
+import App from '../view/Outlet'
+import UpdateInfo from '../view/UpdateInfo'
 
 const routes = [
     {
         path: "/",
-        element: <div>index</div>,
+        element: <App />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                path: 'update_info',
+                element: <UpdateInfo />,
+            },
+            {
+                path: 'bbb',
+                element: <div>bbb</div>
+            }
+        ]
     },
     {
         path: "login",
