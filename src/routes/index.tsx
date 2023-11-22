@@ -5,6 +5,9 @@ import ErrorPage from '../view/ErrorPage';
 import UpdatePassword from '../view/UpdatePassword';
 import App from '../view/Outlet'
 import UpdateInfo from '../view/UpdateInfo'
+import Menu from '../view/Menu'
+import MeetingRoomList from '../view/MeetingRoomList'
+import BookingHistory from '../view/BookingHistory'
 
 const routes = [
     {
@@ -17,9 +20,24 @@ const routes = [
                 element: <UpdateInfo />,
             },
             {
-                path: 'bbb',
-                element: <div>bbb</div>
+                path: '/',
+                element: <Menu />,
+                children: [
+                    {
+                        path: '/',
+                        element: <MeetingRoomList />
+                    },
+                    {
+                        path: 'meeting_room_list',
+                        element: <MeetingRoomList />
+                    },
+                    {
+                        path: 'booking_history',
+                        element: <BookingHistory />
+                    }
+                ]
             }
+
         ]
     },
     {
