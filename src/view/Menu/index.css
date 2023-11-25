@@ -6,3 +6,7 @@
 #menu-container .menu-area {
     width: 200px;
 }
+
+#menu-container .content-area {
+    flex: 1;
+}

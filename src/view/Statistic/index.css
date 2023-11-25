@@ -1,0 +1,18 @@
+#statistics-container {
+    padding: 20px;
+}
+
+
+#statistics-container .statistics-form {
+    margin-bottom: 40px;
+}
+
+#statistics-container .statistics-chart {
+    width: 500px;
+    height: 600px;
+}
+
+#statistics-container .statistics-chart-container {
+    display: flex;
+    gap: 20px;
+}

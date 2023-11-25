@@ -12,6 +12,10 @@ const items: MenuProps['items'] = [
     {
         key: '2',
         label: "预定历史"
+    },
+    {
+        key: '3',
+        label: "统计"
     }
 ];
 
@@ -23,6 +27,9 @@ const handleMenuItemClick: MenuClickEventHandler = (info) => {
             break;
         case '2':
             path = '/booking_history';
+            break;
+        case '3':
+            path = '/statistic';
             break;
     }
     router.navigate(path);
@@ -38,6 +45,8 @@ export default function Menu() {
             return ['1']
         } else if (location.pathname === '/booking_history') {
             return ['2']
+        } else if (location.pathname === '/statistic') {
+            return ['3']
         } else {
             return ['1']
         }

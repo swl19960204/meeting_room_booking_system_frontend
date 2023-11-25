@@ -8,6 +8,7 @@ import UpdateInfo from '../view/UpdateInfo'
 import Menu from '../view/Menu'
 import MeetingRoomList from '../view/MeetingRoomList'
 import BookingHistory from '../view/BookingHistory'
+import Statistic from '../view/Statistic'
 
 const routes = [
     {
@@ -34,6 +35,10 @@ const routes = [
                     {
                         path: 'booking_history',
                         element: <BookingHistory />
+                    },
+                    {
+                        path: 'statistic',
+                        element: <Statistic />
                     }
                 ]
             }
